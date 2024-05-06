@@ -22,7 +22,7 @@ const App = () => {
 
   const navigate = useNavigate();
   const [selectedOption, setSelectedOption] = useState(null);
-  const correctAnswer = '2. Silver';
+  const correctAnswer = '4. a weighted average of the stock prices of a changing set of 30 actively traded stocks.';
   const [showAnswer, setShowAnswer] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
   const [cardVisible, setCardVisible] = useState(false);
@@ -66,30 +66,28 @@ const App = () => {
         <Card className={`questionCard ${cardVisible ? 'show' : ''}`}>
           <CardContent>
             <Typography variant="h5" component="h2">
-              Bombay Stock Exchange became the first stock exchange 
-              in India to launch which commodity
-    
+              The Bombay Stock Exchange Sensitive Index or Sensex is
             </Typography>
 
             <div className="optionsContainer">
               <label className="option">
-                <input type="radio" value="1. Diamond" checked={selectedOption === '1. Diamond'} onChange={handleOptionChange} />
-                Diamond
+                <input type="radio" value="1. a simple average of the stock prices of the top 500 companies by market capitalisation." checked={selectedOption === '1. a simple average of the stock prices of the top 500 companies by market capitalisation.'} onChange={handleOptionChange} />
+                a simple average of the stock prices of the top 500 companies by market capitalisation.
               </label>
               <br></br>
               <label className="option">
-                <input type="radio" value="2. Silver" checked={selectedOption === '2. Silver'} onChange={handleOptionChange} />
-                Silver
+                <input type="radio" value="2. a weighted average of the stock prices of the 500 most actively traded shares." checked={selectedOption === '2. a weighted average of the stock prices of the 500 most actively traded shares.'} onChange={handleOptionChange} />
+                a weighted average of the stock prices of the 500 most actively traded shares.
               </label>
               <br></br>
               <label className="option">
-                <input type="radio" value="3. Platinum" checked={selectedOption === '3. Platinum'} onChange={handleOptionChange} />
-                Platinum
+                <input type="radio" value="3. a weighted average of the stock prices of the 50 most actively traded shares." checked={selectedOption === '3. a weighted average of the stock prices of the 50 most actively traded shares.'} onChange={handleOptionChange} />
+                a weighted average of the stock prices of the 50 most actively traded shares.
               </label>
               <br></br>
               <label className="option">
-                <input type="radio" value="4. Equity" checked={selectedOption === '4. Equity'} onChange={handleOptionChange} />
-                Equity
+                <input type="radio" value="4. a weighted average of the stock prices of a changing set of 30 actively traded stocks." checked={selectedOption === '4. a weighted average of the stock prices of a changing set of 30 actively traded stocks.'} onChange={handleOptionChange} />
+                a weighted average of the stock prices of a changing set of 30 actively traded stocks.
               </label>
               <br></br>
               <label className="option">
@@ -114,7 +112,7 @@ const App = () => {
           </CardContent>
         </Card>
         <br></br>
-        <button onClick={()=>navigate('/quiz3')}>Next Question</button>
+        <button onClick={()=>navigate('/quiz4')}>Next Question</button>
         <span style={{ marginLeft: '200px' }}></span> {/* Adjust the margin value to increase or decrease space */}
         <button onClick={() => navigate('/about')}>GO BACK HOME</button>
       </div>

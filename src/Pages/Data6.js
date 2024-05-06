@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import backgroundImage from '../Images/background_image_2.jpg';
-import sideimage from '../Images/bull_market.jpg';
+import sideimage from '../Images/NSE.jpg';
 import { useNavigate } from 'react-router-dom';
 import './Data.css';
 
@@ -35,7 +35,7 @@ const App = () => {
   }, []);
 
   const handleButtonClick = () => {
-    navigate('/data5');
+    navigate('/data7');
   };
 
   const handleHomeButtonClick = () => {
@@ -91,7 +91,9 @@ const App = () => {
                     color: '#333',
                   }}
                 >
-                 A bull market is a period when stock prices are rising, and investor confidence is high. It's often associated with economic growth and optimism
+                The NSE, founded in 1992 and operational since 1994, is a prominent Indian stock exchange, 
+                notable for its Nifty 50 index comprising 50 actively traded stocks representing various sectors.
+
                 </Typography>
               </CardContent>
             </Card>

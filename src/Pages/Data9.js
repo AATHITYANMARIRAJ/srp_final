@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import backgroundImage from '../Images/background_image_2.jpg';
-import sideimage from '../Images/bull_market.jpg';
+import sideimage from '../Images/rsi.jpg';
 import { useNavigate } from 'react-router-dom';
 import './Data.css';
 
@@ -35,7 +35,7 @@ const App = () => {
   }, []);
 
   const handleButtonClick = () => {
-    navigate('/data5');
+    navigate('/data10');
   };
 
   const handleHomeButtonClick = () => {
@@ -90,8 +90,10 @@ const App = () => {
                     fontWeight: 'bold',
                     color: '#333',
                   }}
-                >
-                 A bull market is a period when stock prices are rising, and investor confidence is high. It's often associated with economic growth and optimism
+                >RSI is a momentum oscillator that measures the speed and change of price movements. 
+                It oscillates between 0 and 100 and is typically calculated over a period of 14 days. RSI values above 70 are considered overbought and below 30 are oversold.
+             
+             
                 </Typography>
               </CardContent>
             </Card>

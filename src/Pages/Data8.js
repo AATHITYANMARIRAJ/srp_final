@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import backgroundImage from '../Images/background_image_2.jpg';
-import sideimage from '../Images/bull_market.jpg';
+import sideimage from '../Images/Agencies.jpg';
 import { useNavigate } from 'react-router-dom';
 import './Data.css';
 
@@ -35,7 +35,7 @@ const App = () => {
   }, []);
 
   const handleButtonClick = () => {
-    navigate('/data5');
+    navigate('/data9');
   };
 
   const handleHomeButtonClick = () => {
@@ -91,7 +91,7 @@ const App = () => {
                     color: '#333',
                   }}
                 >
-                 A bull market is a period when stock prices are rising, and investor confidence is high. It's often associated with economic growth and optimism
+                Regulatory oversight in the Indian stock market is primarily governed by SEBI, with additional roles played by the Reserve Bank of India (RBI) in regulating banking and monetary policies and the Ministry of Corporate Affairs in supervising corporate governance and compliance.
                 </Typography>
               </CardContent>
             </Card>

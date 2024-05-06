@@ -1,93 +1,81 @@
 import React, { useState } from 'react';
-import Header from '../Components/header'; // Import the Header component
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import { useNavigate } from 'react-router-dom';
-import backgroundImage from '../Images/bk3.jpg'; // Import the background image
-import sideimage from '../Images/bull_market.jpg';
-import './Data.css';
+import './Quiz.css';
+import Swal from 'sweetalert2';
 
-const App = () => {
-  const appStyle = {
-    backgroundImage: `url(${backgroundImage})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    minHeight: '100vh',
-    padding: '20px',
+function App() {
+  const topCompanies = ['Amazon', 'Google', 'Infosys', 'Microsoft', 'Apple', 'Tesla', 'Facebook', 'Alibaba', 'Tencent', 'Johnson & Johnson'];
+  const startups = ['Flipkart', 'Ola', 'Paytm', 'Swiggy', 'Zomato', 'Byju\'s', 'Oyo', 'Udaan', 'Cred', 'Delhivery'];
+
+  const [answers, setAnswers] = useState({ novice: '', investment: '', type: '' });
+
+  const handleSelect = (question, option) => {
+    setAnswers({ ...answers, [question]: option });
   };
 
-  const navigate = useNavigate();
-  const [selectedOption, setSelectedOption] = useState(null);
-  const correctAnswer = 'a) Initial Public Offering';
-  const [showAnswer, setShowAnswer] = useState(false);
-  const [isCorrect, setIsCorrect] = useState(false);
+  const handleSubmit = () => {
+    // Check if any question is unanswered
+    if (!answers.novice || !answers.investment || !answers.type) {
+      Swal.fire({
+        title: 'Incomplete!',
+        text: 'Please answer all questions.',
+        icon: 'warning',
+        confirmButtonText: 'Okay'
+      });
+      return; // Exit function if any question is unanswered
+    }
 
-  const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
+    let message = '';
+    if ((answers.novice === 'b'||(answers.novice==='a')) && ((answers.investment === 'a')||(answers.investment === 'b')) && answers.type === 'a') {
+      message = "You can invest in companies like Amazon, Google, Infosys";
+    } else if ((answers.novice === 'a'||(answers.novice==='b')) && answers.investment === 'b' && answers.type === 'b') {
+      message = "You can invest in startups like 'Flipkart', 'Ola'";
+    } else {
+      const combinedOptions = topCompanies.concat(startups).join(', ');
+      message = `You can consider investing in the following:\n\n${combinedOptions}`;
+    }
 
-  const handleCheckAnswer = () => {
-    setShowAnswer(true);
-    setIsCorrect(selectedOption === correctAnswer);
+    Swal.fire({
+      title: 'Investment Options',
+      text: message,
+      icon: 'info',
+      confirmButtonText: 'Okay'
+    });
   };
 
   return (
-    <div style={appStyle}>
-      <Header />
-      <br />
-      <div className="cardContainer">
-        <Card className="questionCard">
-          <CardContent>
-            <Typography variant="h5" component="h2">
-              What does IPO stand for?
-            </Typography>
-
-            <div className="optionsContainer">
-              <label className="option">
-                <input type="radio" value="a) Initial Public Offering" checked={selectedOption === 'a) Initial Public Offering'} onChange={handleOptionChange} />
-                Initial Public Offering
-              </label>
-              <br></br>
-              <label className="option">
-                <input type="radio" value="b) International Portfolio Operation" checked={selectedOption === 'b) International Portfolio Operation'} onChange={handleOptionChange} />
-                International Portfolio Operation
-              </label>
-              <br></br>
-              <label className="option">
-                <input type="radio" value="c) Investment Portfolio Organization" checked={selectedOption === 'c) Investment Portfolio Organization'} onChange={handleOptionChange} />
-                Investment Portfolio Organization
-              </label>
-              <br></br>
-              <label className="option">
-                <input type="radio" value="d) Internal Price Optimization" checked={selectedOption === 'd) Internal Price Optimization'} onChange={handleOptionChange} />
-                Internal Price Optimization
-              </label>
-            </div>
-            <br />
-            <button className="checkButton" onClick={handleCheckAnswer}>Check Answer</button>
-
-            {showAnswer && (
-              <div>
-                <Typography variant="h5" component="h2">
-                  Answer
-                </Typography>
-                <Typography variant="body1">
-                  The correct answer is: <b>{correctAnswer}</b>
-                </Typography>
-                {isCorrect ? <p className="feedbackText">Congratulations! You selected the correct answer.</p> : <p className="feedbackText">Oops! You selected the wrong answer.</p>}
-              </div>
-            )}
-          </CardContent>
-        </Card>
-        <br></br>
-        <button onClick={()=>navigate('/quiz1')}>Next Question</button>
+    <div className="App">
+      <div className="container">
+        <div className="card">
+          <h2>Stock Market Investment Questionnaire</h2>
+          <div>
+            <p>Are you a novice?</p>
+            <select onChange={(e) => handleSelect('novice', e.target.value)}>
+              <option value="">Select</option>
+              <option value="a">No</option>
+              <option value="b">Yes</option>
+            </select>
+          </div>
+          <div>
+            <p>How much money would you like to invest?</p>
+            <select onChange={(e) => handleSelect('investment', e.target.value)}>
+              <option value="">Select</option>
+              <option value="a">Above 1 Lakh</option>
+              <option value="b">Below 1 Lakh</option>
+            </select>
+          </div>
+          <div>
+            <p>Would you like to invest in an established company or in a startup?</p>
+            <select onChange={(e) => handleSelect('type', e.target.value)}>
+              <option value="">Select</option>
+              <option value="a">Established Company</option>
+              <option value="b">Startup</option>
+            </select>
+          </div>
+          <button onClick={handleSubmit}>Submit</button>
+        </div>
       </div>
     </div>
   );
-};
+}
 
 export default App;

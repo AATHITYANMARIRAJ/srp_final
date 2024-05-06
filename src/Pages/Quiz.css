@@ -1,41 +1,60 @@
-.cardContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .questionCard {
-    max-width: 400px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .optionsContainer {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .option {
-    margin-bottom: 10px;
-  }
-  
-  .checkButton {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .checkButton:hover {
-    background-color: #0056b3;
-  }
-  
-  .feedbackText {
-    margin-top: 10px;
-    color: #007bff;
-  }
-  
+.App {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("D:\AATHITYAN\Stock_Market_Prediction_ML\my-react-app\src\Images\bk3.jpg");
+}
+
+.card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.card div {
+  margin-bottom: 20px;
+}
+
+.card select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.card button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+.lists {
+  margin-top: 20px;
+}
+
+.lists h3 {
+  margin-bottom: 10px;
+}
+
+.lists ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.lists li {
+  margin-bottom: 5px;
+}

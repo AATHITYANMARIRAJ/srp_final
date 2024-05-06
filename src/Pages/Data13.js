@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import backgroundImage from '../Images/background_image_2.jpg';
-import sideimage from '../Images/bull_market.jpg';
+import sideimage from '../Images/Liquidity.jpg';
 import { useNavigate } from 'react-router-dom';
 import './Data.css';
 
@@ -35,7 +35,7 @@ const App = () => {
   }, []);
 
   const handleButtonClick = () => {
-    navigate('/data5');
+    navigate('/data14');
   };
 
   const handleHomeButtonClick = () => {
@@ -91,7 +91,8 @@ const App = () => {
                     color: '#333',
                   }}
                 >
-                 A bull market is a period when stock prices are rising, and investor confidence is high. It's often associated with economic growth and optimism
+                  The degree to which an asset or security can be quickly bought or sold in the market without affecting its price.
+
                 </Typography>
               </CardContent>
             </Card>

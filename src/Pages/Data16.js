@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import backgroundImage from '../Images/background_image_2.jpg';
-import sideimage from '../Images/bull_market.jpg';
+import sideimage from '../Images/ipo.jpg';
 import { useNavigate } from 'react-router-dom';
 import './Data.css';
 
@@ -34,9 +34,7 @@ const App = () => {
     };
   }, []);
 
-  const handleButtonClick = () => {
-    navigate('/data5');
-  };
+  
 
   const handleHomeButtonClick = () => {
     // Handle navigation to home page
@@ -91,7 +89,7 @@ const App = () => {
                     color: '#333',
                   }}
                 >
-                 A bull market is a period when stock prices are rising, and investor confidence is high. It's often associated with economic growth and optimism
+                   An IPO, or Initial Public Offering, is the process through which a private company offers its shares to the public for the first time, allowing it to become a publicly traded company. During an IPO, the company issues new shares of stock to investors in exchange for capital investment.
                 </Typography>
               </CardContent>
             </Card>
@@ -99,26 +97,7 @@ const App = () => {
         </div>
         {showButton && (
           <div>
-            <button
-              className="animatedButton"
-              onClick={handleButtonClick}
-              style={{
-                marginTop: '40px',
-                padding: '10px 20px',
-                fontSize: '16px',
-                fontWeight: 'bold',
-                backgroundColor: 'blue',
-                color: '#fff',
-                border: 'none',
-                borderRadius: '5px',
-                cursor: 'pointer',
-                boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
-                transition: 'background-color 0.3s ease',
-                marginRight: '10px', // Adjust the margin as needed
-              }}
-            >
-              Next
-            </button>
+           
             <button
               className="homeButton"
               onClick={handleHomeButtonClick}

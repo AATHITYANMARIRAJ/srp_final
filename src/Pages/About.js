@@ -23,9 +23,9 @@ const OpeningPage = () => {
       <div className="content">
        <h1 >WELCOME TO OUR STOCK MARKET WEBSITE</h1>
         <div className="options">
-          <button onClick={()=>navigate1('/prediction')}>Stock Market Prediction</button>
+          <button onClick={()=>navigate1('/prediction')}>Get Stock Market Data</button>
           <button onClick={()=>navigate2('/data')}>Learn Stock Market</button>
-          <button onClick={()=>navigate2('/quiz')}>Take Up Quiz!!</button>
+          <button onClick={()=>navigate2('/quiz')}>Where to Invest?</button>
         </div>
       </div>
     </div>

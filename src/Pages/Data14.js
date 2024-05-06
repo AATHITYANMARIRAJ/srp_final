@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import backgroundImage from '../Images/background_image_2.jpg';
-import sideimage from '../Images/bull_market.jpg';
+import sideimage from '../Images/momentum.jpeg';
 import { useNavigate } from 'react-router-dom';
 import './Data.css';
 
@@ -35,7 +35,7 @@ const App = () => {
   }, []);
 
   const handleButtonClick = () => {
-    navigate('/data5');
+    navigate('/data15');
   };
 
   const handleHomeButtonClick = () => {
@@ -91,7 +91,10 @@ const App = () => {
                     color: '#333',
                   }}
                 >
-                 A bull market is a period when stock prices are rising, and investor confidence is high. It's often associated with economic growth and optimism
+                  The MACD also provides insight into the <u>MOMENTUM</u> of price movements. 
+                When the MACD line diverges from the signal line 
+                (i.e., moves further away), 
+                it suggests strong momentum in the direction of the trend.
                 </Typography>
               </CardContent>
             </Card>

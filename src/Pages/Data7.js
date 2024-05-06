@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import backgroundImage from '../Images/background_image_2.jpg';
-import sideimage from '../Images/bull_market.jpg';
+import sideimage from '../Images/Indian-Stock-Market.jpg';
 import { useNavigate } from 'react-router-dom';
 import './Data.css';
 
@@ -35,7 +35,7 @@ const App = () => {
   }, []);
 
   const handleButtonClick = () => {
-    navigate('/data5');
+    navigate('/data8');
   };
 
   const handleHomeButtonClick = () => {
@@ -91,7 +91,8 @@ const App = () => {
                     color: '#333',
                   }}
                 >
-                 A bull market is a period when stock prices are rising, and investor confidence is high. It's often associated with economic growth and optimism
+                The Indian stock market, originating with the establishment of the Bombay Stock Exchange (BSE) in 1875, has evolved significantly, the introduction of benchmark indices such as the Sensex, initiated by the BSE in 1986, composed of 30 large and financially
+                 stable companies across key sectors.
                 </Typography>
               </CardContent>
             </Card>

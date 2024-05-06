@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import backgroundImage from '../Images/background_image_2.jpg';
-import sideimage from '../Images/bull_market.jpg';
+import sideimage from '../Images/BollingerBands.jpg';
 import { useNavigate } from 'react-router-dom';
 import './Data.css';
 
@@ -35,7 +35,7 @@ const App = () => {
   }, []);
 
   const handleButtonClick = () => {
-    navigate('/data5');
+    navigate('/data13');
   };
 
   const handleHomeButtonClick = () => {
@@ -91,7 +91,11 @@ const App = () => {
                     color: '#333',
                   }}
                 >
-                 A bull market is a period when stock prices are rising, and investor confidence is high. It's often associated with economic growth and optimism
+                  Bollinger Bands are volatility bands placed above and below a stock's moving average.
+   They consist of three lines: the upper band, the lower band, and the middle band.
+   The distance between the upper and lower bands widens when volatility increases and narrows when volatility decreases.
+
+
                 </Typography>
               </CardContent>
             </Card>
